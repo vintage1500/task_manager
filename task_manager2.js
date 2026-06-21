@@ -69,7 +69,7 @@ function completeTask(index) {
 function deleteTask(index) {
     const task = tasks[index];
     if (!task) {
-        console.log(`Задачи ${index} не существует`);
+        console.log(`Задачи ${index + 1} не существует`);
         return
     }
     if (task.isCompleted === false) {
