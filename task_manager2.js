@@ -22,12 +22,12 @@ function createTask(title, description) {
 }
 
 // Добавление объекта задачи в массив
-function setTask(title, description) {
+function setTask(title, description = '') {
     if (!title.trim()) {
         console.log('Ошибка. Для создания задачи укажите название\n');
         return
     }
-    const task = createTask(title.trim(), description.trim() || '');
+    const task = createTask(title.trim(), description.trim());
     tasks.push(task);
     console.log((`Задача №${tasks.length} добавлена \n`));
 }
